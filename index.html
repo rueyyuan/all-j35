@@ -6,19 +6,7 @@
     <title>初三（5）班级网群众版</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="icon" href="Pictures/j305._chhs2025.jpg" type="image/x-icon">
-    <!-- 遮罩层 -->
-    <div id="overlay"></div>
-    
-    <!-- 自定义 iPhone 式弹窗 -->
-    <div id="customAlert">
-        <h3>提示</h3>
-        <p>抱歉，该功能暂未开放，请稍后再试</p>
-        <div class="alert-buttons">
-            <button class="cancel" onclick="closeAlert()">取消</button>
-            <button class="confirm" onclick="closeAlert()">确定</button>
-        </div>
-    </div>
-    
+
     <style>
         /* 遮罩层 */
         #overlay {
@@ -29,7 +17,7 @@
             z-index: 9998;
             backdrop-filter: blur(2px);
         }
-    
+
         /* 弹窗 */
         #customAlert {
             display: none;
@@ -40,84 +28,78 @@
             background: #fefefe;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            padding: 20px 15px 0 15px;
+            padding: 20px 15px;
             text-align: center;
             z-index: 9999;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             animation: popin 0.3s ease-out;
         }
-    
+
         #customAlert h3 {
             margin: 0 0 8px 0;
             font-size: 18px;
             font-weight: 600;
-            color: #333;
+            color: #e74c3c; /* 红色，警告感 */
         }
-    
+
         #customAlert p {
             font-size: 15px;
             color: #555;
             margin: 0 0 20px 0;
         }
-    
-        /* 按钮容器 */
-        .alert-buttons {
-            display: flex;
-            border-top: 1px solid #d1d1d6;
-            height: 50px;
-        }
-    
-        /* 按钮样式 */
-        .alert-buttons button {
-            flex: 1;
+
+        /* 确定按钮 */
+        #customAlert button {
+            width: 100%;
             border: none;
-            background: none;
+            background: #007AFF;
+            color: white;
             font-size: 17px;
+            font-weight: 600;
+            border-radius: 12px;
+            padding: 10px 0;
             cursor: pointer;
             outline: none;
             transition: background 0.2s;
         }
-    
-        .alert-buttons button.cancel {
-            color: #007AFF;
-            border-right: 1px solid #d1d1d6;
+
+        #customAlert button:hover {
+            background: #005bb5;
         }
-    
-        .alert-buttons button.confirm {
-            color: #007AFF;
-            font-weight: 600;
-        }
-    
-        .alert-buttons button:hover {
-            background: rgba(0,0,0,0.05);
-        }
-    
+
         @keyframes popin {
             0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
             100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
         }
+
+        /* 禁止 body 滚动 */
+        body.no-scroll {
+            overflow: hidden;
+        }
     </style>
-    
+
     <script>
         function showAlert() {
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('customAlert').style.display = 'block';
+            document.body.classList.add('no-scroll'); // 禁止滚动
         }
-    
+
         function closeAlert() {
             document.getElementById('overlay').style.display = 'none';
             document.getElementById('customAlert').style.display = 'none';
+            document.body.classList.remove('no-scroll'); // 恢复滚动
         }
     </script>
-
-
 </head>
 <body>
     <div id="particles-js"></div>
+
     <header>
         <h1>欢迎来到初三（5）班级网群众版</h1>
         <p>群众版部分功能不开放，只开放给本班同学使用</p>
     </header>
+
     <nav>
         <a href="#班级简介">班级简介</a>
         <a href="#通知">通知</a>
@@ -129,8 +111,9 @@
         <a href="javascript:void(0);" onclick="showAlert()">投稿墙（不开放）</a>
         <a href="https://rueyyuan.github.io/all-j35/ryb.html" target="_blank">荣誉榜（暂时开放）</a>
     </nav>
-    
+
     <img src="Pictures/j305._chhs2025.jpg" alt="初三（5）班級合照" class="header-image">
+
     <div class="container">
         <section id="班级简介" class="section">
             <h2>班级简介</h2>
@@ -138,27 +121,32 @@
             <p>班级口号：自动自发，自律自强。</p>
             <p>班导：郑俊健 师。</p>
         </section>
+
         <section id="通知" class="section">
             <h2>通知</h2>
             <ul>
                 <li>无通知</li>
             </ul>
         </section>
+
         <section id="功课" class="section">
             <h2>功课（一个星期改一次一下的内容）</h2>
             <ul>
                 <li>无功课</li>
             </ul>
         </section>
+
         <section id="固定座位表" class="section">
             <h2>九月 座位表（不开放）</h2>
             <p>此内容仅对本班同学开放。</p>
         </section>
+
         <section id="值日表" class="section">
             <h2>值日生固定职位（不开放）</h2>
             <p>此内容仅对本班同学开放。</p>
         </section>
     </div>
+
     <footer>
         <p>&copy; 2025 初三（5）. 保留所有权利。</p>
         <p>由 元 设计与维护。</p>
@@ -167,23 +155,12 @@
     <!-- 自定义弹窗 -->
     <div id="overlay"></div>
     <div id="customAlert">
-        <h3>提示</h3>
-        <p>抱歉，该功能暂未开放，请稍后再试</p>
+        <h3>警告</h3>
+        <p>只开放给本班同学</p>
         <button onclick="closeAlert()">确定</button>
     </div>
 
     <script src="static/js/particles.js"></script>
     <script src="static/js/script.js"></script>
-    <script>
-        function showAlert() {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('customAlert').style.display = 'block';
-        }
-
-        function closeAlert() {
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('customAlert').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
