@@ -123,15 +123,28 @@
       align-items: center;
     }
 
-    .modal img {
+    /* 新增：modal 容器 */
+    .modal-content {
+      position: relative;
+      display: inline-block;
+    }
+
+    .modal-content img {
       max-width: 90%;
       max-height: 85%;
       border-radius: 12px;
-      position: relative;
     }
 
-    .modal .watermark {
+    /* modal 内的水印加大 */
+    .modal-content .watermark {
       font-size: 3em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      color: rgba(255,255,255,0.5);
+      font-weight: bold;
+      pointer-events: none;
     }
 
     .close-btn {
@@ -227,9 +240,12 @@
     </div>
   </div>
 
+  <!-- 放大显示 Modal -->
   <div class="modal" id="modal">
-    <div class="watermark">初三（5）</div>
-    <img id="modalImg" src="">
+    <div class="modal-content">
+      <img id="modalImg" src="">
+      <div class="watermark">初三（5）</div>
+    </div>
   </div>
 
   <footer>© 2025 居銮中华中学初三（5） — 荣誉榜</footer>
@@ -250,7 +266,6 @@
       modal.style.display = 'none';
     });
 
-    // 关闭网站按钮（直接关闭，无提示）
     function closeWebsite() {
       window.open('', '_self');
       window.close();
