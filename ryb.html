@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2025 初三（5）班级荣誉榜</title>
+  <!-- 网站图标 -->
+  <link rel="icon" type="image/png" href="Pictures/j305._chhs2025.jpg">
+  <style>
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .photo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .photo img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      border-left: 6px solid #007bff;
+      padding-left: 12px;
+      margin-top: 30px;
+      color: #007bff;
+    }
+
+    .center-title {
+      text-align: center;
+      color: #007bff;
+      font-size: 1.5em;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      border: none;
+      font-weight: bold;
+    }
+
+    .photo h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.8;
+      margin-left: 20px;
+    }
+
+    .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .cert-container {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .cert-container img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .cert-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: 1.5em;
+      color: rgba(255,255,255,0.5);
+      pointer-events: none;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .modal .watermark {
+      font-size: 3em;
+    }
+
+    .close-btn {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .close-btn button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .close-btn button:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5em;
+        padding: 30px 10px;
+      }
+      .center-title {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>2025 初三（5）班级荣誉榜</header>
+
+  <div class="container">
+    <div class="photo">
+      <h2>荣誉榜照片</h2>
+      <img src="Pictures/class_photo.jpg" alt="荣誉榜照片">
+    </div>
+
+    <h2>🏀 2025年居銮中华中学 U17 篮球比赛得奖</h2>
+    <p>萧正杰（31），陈圣元（40）</p>
+
+    <h2 style="font-size: 1.2em;">🎪 2025 全国扯铃观摩赛《铃铃相伴·家的会议》荣获</h2>
+    <p>陈瑞汶（24），何羽生（27）</p>
+
+    <h2>🎤 华语演讲比赛 优秀奖</h2>
+    <p>苏唯唯（12）</p>
+
+    <h2>♟️ MSSD 西洋棋比赛得奖</h2>
+    <p>黄楷恒（30），第11名</p>
+
+    <h2>🏸 2025年居銮中华中学羽球比赛得奖</h2>
+    <p>谢永棠（23）第二名，余志森（28）第三名</p>
+
+    <h2>🏓 乒乓比赛</h2>
+    <p>谢鸿杰（22）第三名</p>
+
+    <h2>🏃‍♂️ 2025年居銮中华中学校庆运动会得奖</h2>
+    <p>林彤蔚（9）季军，余志森（28）第五名</p>
+
+    <h2>🏓 2025年 Liga 乒乓赛得奖</h2>
+    <p>方可儿（6）冠军</p>
+
+    <h2 class="center-title">🏅 得奖奖状</h2>
+
+    <div class="certificates">
+      <div class="cert-container"><img src="Pictures/award1.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award2.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award3.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award4.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award5.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award6.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award7.jpg"><div class="watermark">初三（5）</div></div>
+      <div class="cert-container"><img src="Pictures/award8.jpg"><div class="watermark">初三（5）</div></div>
+    </div>
+
+    <div class="close-btn">
+      <button onclick="closeWebsite()">关闭网站</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="watermark">初三（5）</div>
+    <img id="modalImg" src="">
+  </div>
+
+  <footer>© 2025 居銮中华中学初三（5） — 荣誉榜</footer>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const certs = document.querySelectorAll('.cert-container img');
+
+    certs.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // 关闭网站按钮（直接关闭，无提示）
+    function closeWebsite() {
+      window.open('', '_self');
+      window.close();
+    }
+  </script>
+
+</body>
+</html>
