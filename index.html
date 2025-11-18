@@ -16,12 +16,12 @@
     <nav>
         <a href="#班级简介">班级简介</a>
         <a href="#通知">通知</a>
-        <a href="https://rueyyuan.github.io/j305/kcb.html" target="_blank">课程表（暂时不开放）</a>
+        <a href="javascript:void(0);" onclick="showAlert()">课程表（暂时不开放）</a>
         <a href="#功课">功课</a>
-        <a href="#固定座位表">固定座位表（不开放）</a>
-        <a href="#值日表">值日表（不开放）</a>
-        <a href="https://forms.gle/obe1yXxRsy7Er2Yt6" target="_blank">投稿墙投稿（不开放）</a>
-        <a href="https://rueyyuan.wordpress.com" target="_blank">投稿墙（不开放）</a>
+        <a href="javascript:void(0);" onclick="showAlert()">固定座位表（不开放）</a>
+        <a href="javascript:void(0);" onclick="showAlert()">值日表（不开放）</a>
+        <a href="javascript:void(0);" onclick="showAlert()">投稿墙投稿（不开放）</a>
+        <a href="javascript:void(0);" onclick="showAlert()">投稿墙（不开放）</a>
 		<a href="https://rueyyuan.github.io/j305/ryb.html" target="_blank">荣誉榜（暂时开放）</a>
     </nav>
     
@@ -60,5 +60,11 @@
     </footer>
     <script src="static/js/particles.js"></script>
     <script src="static/js/script.js"></script>
+    <script>
+        function showAlert() {
+            alert('此功能只开放给本班同学使用');
+            return false;
+        }
+    </script>
 </body>
 </html>
